@@ -1,0 +1,25 @@
+# docker-compose.yml
+version: '3.3'
+services:
+  butler-auth:
+    image: ptarmiganlabs/butler-auth:1.0.0
+    container_name: butler-auth
+    restart: always
+    ports:
+      - "8081:8081"       # http/web server used to serve sample login forms included in Butler Auth
+      - "8761:8761"       # REST API called by Qlik Sense Enterprise when users should be authenticated
+    volumes:
+      # Make config file and logs accessible outside of container
+      - "./config:/nodeapp/config"
+      - "./log:/nodeapp/log"
+      - "./sessions:/nodeapp/sessions"
+      - "/path/to/tls/cert:/nodeapp/config/tls"
+    environment:
+      - "NODE_ENV=production"
+    logging:
+      driver: json-file
+      options:
+        max-file: "5"
+        max-size: "5m"
+      
+

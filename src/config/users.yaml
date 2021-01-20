@@ -1,0 +1,9 @@
+users:
+  - username: goran
+    fullName: G S
+    password: aaa
+    comment: Root admin user
+  - username: joe
+    fullName: Joe Jonson
+    password: bbb
+    comment: Regular user

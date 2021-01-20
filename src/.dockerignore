@@ -1,0 +1,15 @@
+.drone.yml
+.codeclimate.yml
+.eslintrc.yml
+.jshintrc
+.prettierignore
+.prettierrc
+.dockerignore
+.gitignore
+package-lock.json
+Dockerfile*
+docker-compose.yml
+src/config/*
+config/*
+sessions/*
+docker/*
