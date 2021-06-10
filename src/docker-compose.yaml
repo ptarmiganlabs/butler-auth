@@ -2,7 +2,7 @@
 version: '3.3'
 services:
   butler-auth:
-    image: ptarmiganlabs/butler-auth:1.0.0
+    image: ptarmiganlabs/butler-auth:1.0.1
     container_name: butler-auth
     restart: always
     ports:
