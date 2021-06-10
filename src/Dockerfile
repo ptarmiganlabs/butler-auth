@@ -1,4 +1,3 @@
-# Dockerfile for manual building of image
 # Build Docker image for Amd64
 FROM node:12-stretch
 
